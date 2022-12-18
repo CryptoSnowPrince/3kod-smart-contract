@@ -3,8 +3,9 @@
   "name": "3kod-smart-contract",
   "version": "1.0.0",
   "scripts": {
-    "test": "ts-mocha --timeout 0 --slow 99999999999999999 ./tests/*.ts",
-    "gen-binding": "completium-cli run binder-ts"
+    "cli": "completium-cli",
+    "gen-binding": "completium-cli run binder-ts",
+    "test": "ts-mocha --timeout 0 --slow 99999999999999999 ./tests/*.ts"
   },
   "dependencies": {
     "@completium/archetype-ts-types": "latest",
