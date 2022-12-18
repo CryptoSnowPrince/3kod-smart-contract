@@ -1,0 +1,11 @@
+archetype counter
+
+variable count : int = 5
+
+entry increase() {
+  count := count + 1
+}
+
+entry decrease() {
+  count := count - 1
+}

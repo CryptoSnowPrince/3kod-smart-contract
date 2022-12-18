@@ -6,3 +6,7 @@ variable s : string = ""
 entry exec() {
   s := "Hello Archetype World!"
 }
+
+entry exec1() {
+  s := "exec1!"
+}
