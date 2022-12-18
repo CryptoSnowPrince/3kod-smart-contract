@@ -5,6 +5,7 @@
   "scripts": {
     "cli": "completium-cli",
     "gen-binding": "completium-cli run binder-ts",
+    "deploy": "completium-cli deploy",
     "test": "ts-mocha --timeout 0 --slow 99999999999999999 ./tests/*.ts"
   },
   "dependencies": {
