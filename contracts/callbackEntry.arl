@@ -1,0 +1,51 @@
+archetype callbackEntry
+
+variable admin  : address = tz1afKmEFo11mpXr4JdodJDTXYLfw7GTFbak
+variable issuer : address = tz1afKmEFo11mpXr4JdodJDTXYLfw7GTFbak
+
+variable val : nat = 10
+
+event ValChanged {
+    oldVal: nat;
+    newVal: nat
+}
+
+entry setAdmin1 (value : address) {
+  effect {
+    admin := value;
+  }
+}
+
+entry setIssuer1 (value : address) {
+  effect {
+    issuer := value;
+  }
+}
+
+getter setVal(val_: nat) : nat {
+    emit<ValChanged>({val; val_});
+    val := val_;
+    return val
+}
+
+entry setVal1(val_: nat) {
+    emit<ValChanged>({val; val_});
+    val := val_
+}
+
+view affine(x : int) : int {
+  return (2 * x + 3)
+}
+
+variable bar : nat = 0
+variable msg : string = ""
+
+entry getBar1(s: string, callback : contract<nat>) {
+  msg := s;
+  transfer transferred to entry callback(bar + length(msg))
+}
+
+entry getBar(s: string, callback : option<contract<nat>>) {
+  msg := s;
+  transfer transferred to entry callback(bar + length(msg))
+}

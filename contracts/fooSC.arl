@@ -1,0 +1,11 @@
+archetype fooSC
+
+variable foo : nat = 0
+
+entry setFoo(v : nat) {
+  foo := v
+}
+
+entry getFoo1(getter_addr : address, s: string) {
+  transfer 0tz to getter_addr call getBar1<string*contract<nat>>((s, self.setFoo))
+}
