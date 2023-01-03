@@ -45,7 +45,7 @@ entry getBar1(s: string, callback : contract<nat>) {
   transfer transferred to entry callback(bar + length(msg))
 }
 
-entry getBar(s: string, callback : option<contract<nat>>) {
-  msg := s;
-  transfer transferred to entry callback(bar + length(msg))
-}
+// entry getBar(s: string, callback : option<contract<nat>>) {
+//   msg := s;
+//   transfer transferred to entry callback(bar + length(msg))
+// }
