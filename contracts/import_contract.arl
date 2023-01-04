@@ -1,13 +1,13 @@
 archetype import_contract
 
-import UniswapV3Factory from "./contracts/simple.arl"
+import simple_contract from "./michelson/simple_contract.tz"
 
 variable res : nat = 0
 
 entry exec () {
   const a = caller;
   const n = 2;
-//   transfer 0tz to entry simple(a).exec(n)
+  transfer 0tz to entry simple_contract(a).exec(n)
 
   // const c : contract<nat> = import_decl(a).e;
   // transfer 0tz to entry c(n);

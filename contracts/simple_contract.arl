@@ -1,4 +1,4 @@
-archetype simple
+archetype simple_contract
 
 variable res : nat = 0
 variable res1 : nat = 0
