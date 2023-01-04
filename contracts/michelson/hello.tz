@@ -1,0 +1,19 @@
+# ""
+{
+  storage string;
+  parameter (or (unit %exec) (unit %exec1));
+  code { UNPAIR;
+         IF_LEFT
+           { DROP;
+             PUSH string "Hello Archetype World!";
+             SWAP;
+             DROP;
+             NIL operation;
+             PAIR }
+           { DROP;
+             PUSH string "exec1!";
+             SWAP;
+             DROP;
+             NIL operation;
+             PAIR } };
+}
