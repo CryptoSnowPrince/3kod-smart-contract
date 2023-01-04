@@ -1,7 +1,12 @@
 archetype simple
 
 variable res : nat = 0
+variable res1 : nat = 0
 
 entry exec (n : nat) {
   res := n
+}
+
+entry exec1 (n : nat) {
+  res1 := n
 }
